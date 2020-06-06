@@ -1,18 +1,18 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
-    document.getElementById("submitBtn").addEventListener('click', onSubmitClick);
+    document.getElementById("signupBtn").addEventListener('click', onSubmitClick);
 
     function onSubmitClick() {
         // alert("hi");
         
-
+        var i_no = document.getElementById("i_no").value;
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var role = document.getElementById("role").value;
-        var psw = document.getElementById("psw").value;
+        var psw = document.getElementById("password").value;
 
         var jsonObject = {
-            "i_no": "123",
+            "i_no": i_no,
             "name": name,
             "email": email,
             "role": role,
@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 // var datatext = xhr.responseText;
                 // var jsonResponse = JSON.parse(datatext);
                 // console.log("Your id is "+jsonResponse.id);
-                alert("Registration Successful! Your id is " );
+                alert("Registration Successful! " );
             }
         }
         xhr.open("POST", "http://localhost:8020/register");
