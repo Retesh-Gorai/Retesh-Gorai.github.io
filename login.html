@@ -106,53 +106,24 @@
 </nav>
 <!--style="border:3px solid #ccc"-->
 
-<form style="margin-top: 5vh;">
+<form style="margin-top: 5vh;" action="/login" method="POST">
     <div class="container">
-        <h1 style="color: #fafafa">Sign Up for leave scheduler</h1>
-        <p style="color: #fafafa">Please fill in this form to create an account.</p>
-        <hr>
-
-        <label for="i_no" style="color: #fafafa"><b>I_No</b></label>
-        <input type="text" id="i_no" placeholder="Enter your i_no" name="i_no" required>
-
-        <label for="name" style="color: #fafafa"><b>Name</b></label>
-        <input type="text" id="name" placeholder="Enter your name" name="name" required>
-
-        <label for="email" style="color: #fafafa"><b>Email</b></label>
-        <input type="email" id="email" placeholder="Enter Email" name="email" required>
-
-        <label for="role" style="color: #fafafa"><b>Role</b></label>
-        <select id="role" name="role">
-            <option value="Engineer">Engineer</option>
-            <option value="Manager">Manager</option>
-            <option value="Business lead">Business lead</option>
-            <option value="MD">MD</option>
-        </select>
-
-
-        <label for="password" style="color: #fafafa"><b>Password</b></label>
-        <input type="password" id="password" placeholder="Enter Password" name="password" required>
-
-        <label for="psw-repeat" style="color: #fafafa"><b>Repeat Password</b></label>
-        <input type="password" id="psw-repeat" placeholder="Repeat Password" name="psw-repeat" required>
-
-        <label style="color: #fafafa">
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-        </label>
-
-        <p style="color: #fafafa">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
-            Privacy</a>.</p>
+        <div class="form-group">
+            <i class="fa fa-user"></i>
+            <input type="text" class="form-control" placeholder="Enter your username" name="username" id="username" required="required">
+        </div>
+        <div class="form-group">
+            <i class="fa fa-lock"></i>
+            <input type="password" class="form-control" placeholder="Enter your password" name="password" id="password" required="required">
+        </div>
 
         <div class="clearfix">
-            <button type="button" class="cancelbtn" onclick="document.location = 'index.html'">Cancel</button>
-            <button type="button" class="signupbtn" id="signupBtn">Sign Up</button>
+            <button type="button" class="cancelbtn" onclick="document.location = '/index'">Cancel</button>
+            <button type="button" class="btn btn-primary btn-block btn-lg" id ="loginbtn">Log in</button>
         </div>
     </div>
 </form>
 
-
-<script src="js/signup.js"></script>
-<script src="js/login.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
