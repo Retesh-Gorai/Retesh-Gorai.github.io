@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 alert("Registration Successful! " );
             }
         }
-        xhr.open("POST", "http://localhost:8020/register");
+        xhr.open("POST", "http://cors.io/?http://localhost:8020/register");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.setRequestHeader("Access-Control-Allow-Origin","*");
         xhr.send(jsonString);
