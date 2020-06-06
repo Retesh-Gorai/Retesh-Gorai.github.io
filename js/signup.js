@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         var role = document.getElementById("role").value;
         var psw = document.getElementById("password").value;
 
-        var jsonObject = {
+        const jsonObject = {
             "i_no": i_no,
             "name": name,
             "email": email,
