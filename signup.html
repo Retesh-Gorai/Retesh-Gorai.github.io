@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    /* Full-width input fields */
+    input[type=text], input[type=password], input[type=email], select {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, select {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+    /* Set a style for all buttons */
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    button:hover {
+        opacity: 1;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #e3004c;
+    }
+
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn, .signupbtn {
+        float: left;
+        width: 50%;
+    }
+
+    /* Add padding to container elements */
+    .container {
+        padding: 25px;
+    }
+
+    /* Clear floats */
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    /* Change styles for cancel button and signup button on extra small screens */
+    @media screen and (max-width: 300px) {
+        .cancelbtn, .signupbtn {
+            width: 100%;
+        }
+    }
+</style>
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="index.html"><span class="glyphicon glyphicon-calendar"></span></a></li>
+        </ul>
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Leave Scheduler</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#myModal" class="trigger-btn" data-toggle="modal"><span
+                    class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="about.html"><span class="glyphicon glyphicon-fire"></span> About us</a></li>
+        </ul>
+
+    </div>
+</nav>
+<!--style="border:3px solid #ccc"-->
+
+<form style="margin-top: 5vh;">
+    <div class="container">
+        <h1 style="color: #fafafa">Sign Up for leave scheduler</h1>
+        <p style="color: #fafafa">Please fill in this form to create an account.</p>
+        <hr>
+
+        <label for="i_no" style="color: #fafafa"><b>I_No</b></label>
+        <input type="text" id="i_no" placeholder="Enter your i_no" name="i_no" required>
+
+        <label for="name" style="color: #fafafa"><b>Name</b></label>
+        <input type="text" id="name" placeholder="Enter your name" name="name" required>
+
+        <label for="email" style="color: #fafafa"><b>Email</b></label>
+        <input type="email" id="email" placeholder="Enter Email" name="email" required>
+
+        <label for="role" style="color: #fafafa"><b>Role</b></label>
+        <select id="role" name="role">
+            <option value="Engineer">Engineer</option>
+            <option value="Manager">Manager</option>
+            <option value="Business lead">Business lead</option>
+            <option value="MD">MD</option>
+        </select>
+
+
+        <label for="password" style="color: #fafafa"><b>Password</b></label>
+        <input type="password" id="password" placeholder="Enter Password" name="password" required>
+
+        <label for="psw-repeat" style="color: #fafafa"><b>Repeat Password</b></label>
+        <input type="password" id="psw-repeat" placeholder="Repeat Password" name="psw-repeat" required>
+
+        <label style="color: #fafafa">
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
+        <p style="color: #fafafa">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
+            Privacy</a>.</p>
+
+        <div class="clearfix">
+            <button type="button" class="cancelbtn" onclick="document.location = 'index.html'">Cancel</button>
+            <button type="button" class="signupbtn" id="signupBtn">Sign Up</button>
+        </div>
+    </div>
+</form>
+
+ <!-- Modal login html-->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Member Login</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div class="form-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" class="form-control" placeholder="I_No" id="i_no" required="required">
+                    </div>
+                    <div class="form-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" class="form-control" placeholder="Password" id="password" required="required">
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-primary btn-block btn-lg" id ="loginbtn" value="Login">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/signup.js"></script>
+<script src="js/login.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
