@@ -41,7 +41,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         xhr.setRequestHeader("Access-Control-Allow-Origin",'*');
         xhr.send(jsonString);
 
-
     }
 
 
