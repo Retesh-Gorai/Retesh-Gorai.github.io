@@ -58,9 +58,10 @@
             <textarea class="form-control" rows="5" id="comment"></textarea>
         </div>
 
-<div sec:authorize="isAuthenticated()">
+<!-- <div sec:authorize="isAuthenticated()">
     <h2 style="color: #fafafa">Authenticated as <span style="color:blue" sec:authentication="name"></span></h2> 
-</div>
+</div> -->
+<span th:text ="${#authentication.getPrincipal().getUser().getFirstName()}"></span>
         <button type="button" class="btn btn-default" id="submitBtn">Submit</button>
     </form>
 </div>
