@@ -61,7 +61,7 @@
 <!-- <div sec:authorize="isAuthenticated()">
     <h2 style="color: #fafafa">Authenticated as <span style="color:blue" sec:authentication="name"></span></h2> 
 </div> -->
-<span th:text ="${#authentication.getPrincipal().getUser().getFirstName()}"></span>
+<span style="color:#fafafa" th:text ="${#authentication.getPrincipal().getUser().getFirstName()}"></span>
         <button type="button" class="btn btn-default" id="submitBtn">Submit</button>
     </form>
 </div>
