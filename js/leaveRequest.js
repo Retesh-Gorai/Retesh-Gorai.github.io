@@ -11,8 +11,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         var jsonObject = {
             "ino":ino,
-            "startDate": startDate,
-            "endDate": endDate,
+            "startdate": startDate,
+            "enddate": endDate,
             "comment":comment
         }
         console.log(jsonObject);
