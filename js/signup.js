@@ -5,14 +5,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     function onSubmitClick() {
         // alert("hi");
         
-        var i_no = document.getElementById("i_no").value;
+        var ino = document.getElementById("i_no").value;
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var role = document.getElementById("role").value;
         var psw = document.getElementById("password").value;
 
         const jsonObject = {
-            "i_no": i_no,
+            "ino": ino,
             "name": name,
             "email": email,
             "role": role,
