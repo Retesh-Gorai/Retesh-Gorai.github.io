@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             }
         }
-        xhr.open("POST", "https://6331819ebeb5.ngrok.io/users/leaveREquest");
+        xhr.open("POST", "http://localhost:8020/applyLeave");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.setRequestHeader("Access-Control-Allow-Origin",'*');
         xhr.send(jsonString);
