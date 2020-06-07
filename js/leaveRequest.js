@@ -24,9 +24,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
             if (xhr.readyState == XMLHttpRequest.DONE) {
 
                 var datatext = xhr.responseText;
-                var jsonResponse = JSON.parse(datatext);
-                var status = jsonResponse.status;
-                if (status == 200){
+                // var jsonResponse = JSON.parse(datatext);
+                // var status = jsonResponse.status;
+                if (datatext === "ok"){
                     alert("Leave Requested Successfully");
                 }
                 else
