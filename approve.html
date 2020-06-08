@@ -54,17 +54,18 @@
     <table style="width: 80%; text-align: center; margin-left: auto; margin-right: auto">
         <tr>
 
-            <td>ID</td>
+            <td>I_no</td>
             <td>Name</td>
-            <td>Salary</td>
-            <td>Age</td>
+            <td>Leave Start Date</td>
+            <td>Leave Start Date</td>
+            <td>Comment</td>
 
         </tr>
         <tr ng-repeat="x in employees.data">
-            <td>{{ x.id }}</td>
-            <td>{{ x.employee_name }}</td>
-            <td>{{ x.employee_salary }}</td>
-            <td>{{ x.employee_age }}</td>
+            <td>{{ x.startdate }}</td>
+            <td>{{ x.enddate }}</td>
+            <td>{{ x.cooment }}</td>
+            <td>{{ x.ino }}</td>
         </tr>
     </table>
 
@@ -75,11 +76,11 @@
     app.controller('customersCtrl', function($scope) {
 
         var settings = {
-            "url": "http://dummy.restapiexample.com/api/v1/employees",
+            "url": "http://localhost:8020/showLeave",
             "method": "GET",
             "timeout": 0,
             "headers": {
-                "Cookie": "ezoadgid_133674=-1; ezoref_133674=; ezoab_133674=mod16-c; active_template::133674=pub_site.1591512642"
+                "Access-Control-Allow-Origin" : "*"
             },
         };
 
