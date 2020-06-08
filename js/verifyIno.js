@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if (datatext === "Manager"){
                     window.location.href = "approve.html";
                 }
-                else
-                window.location.href = "error.html";
+                else{ window.location.href = "error.html";}
+               
 
             }
         }
