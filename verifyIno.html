@@ -35,7 +35,6 @@
         
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="http://localhost:8020/apply"><span class="glyphicon glyphicon-fire"></span> Apply</a></li>
-                    <li><a href="http://localhost:8020/approve"><span class="glyphicon glyphicon-fire"></span> Approve</a></li>
                     <li><a href="http://localhost:8020/about"><span class="glyphicon glyphicon-fire"></span> About us</a></li>
                     <li><a href="http://localhost:8020/logout"><span class="glyphicon glyphicon-fire"></span> Logout</a></li>
                 </ul>
@@ -60,29 +59,6 @@
 </form>
 
 
-
-
-<script>
-    var app = angular.module('myApp', []);
-    app.controller('customersCtrl', function($scope) {
-
-        var settings = {
-            "url": "http://localhost:8020/approve",
-            "method": "GET",
-            "timeout": 0,
-            "headers": {
-                "Cookie": "ezoadgid_133674=-1; ezoref_133674=; ezoab_133674=mod16-c; active_template::133674=pub_site.1591512642"
-            },
-        };
-
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-            $scope.employees=response;
-            $scope.$apply();
-        });
-
-    });
-</script>
 
 </body>
 </html>
