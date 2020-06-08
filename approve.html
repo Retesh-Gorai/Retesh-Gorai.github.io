@@ -55,17 +55,16 @@
         <tr>
 
             <td>I_no</td>
-            <td>Name</td>
             <td>Leave Start Date</td>
-            <td>Leave Start Date</td>
+            <td>Leave End Date</td>
             <td>Comment</td>
 
         </tr>
         <tr ng-repeat="x in employees.data">
+            <td>{{ x.ino }}</td>
             <td>{{ x.startdate }}</td>
             <td>{{ x.enddate }}</td>
-            <td>{{ x.cooment }}</td>
-            <td>{{ x.ino }}</td>
+            <td>{{ x.comment }}</td>
         </tr>
     </table>
 
