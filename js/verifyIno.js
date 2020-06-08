@@ -16,18 +16,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const xhr = new XMLHttpRequest();
 
         xhr.onreadystatechange = function () {
-        //     if (xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.readyState == XMLHttpRequest.DONE) {
 
-        //         var datatext = xhr.responseText;
-        //         var jsonResponse = JSON.parse(datatext);
-        //         var status = jsonResponse.status;
-        //         if (datatext === "ok"){
-        //             alert("Verified");
-        //         }
-        //         else
-        //             alert("Could not verify");
+                var datatext = xhr.responseText;
+                // var jsonResponse = JSON.parse(datatext);
+                // var status = jsonResponse.status;
+                if (datatext === "Manager"){
+                    window.location.href = "approve.html";
+                }
+                else
+                window.location.href = "error.html";
 
-        //     }
+            }
         }
         xhr.open("POST", "http://localhost:8020/approve");
         xhr.setRequestHeader("Content-Type", "application/json");
