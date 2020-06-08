@@ -3,12 +3,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("submitBtn").addEventListener('click', onSubmitBtnClick);
 
     function onSubmitBtnClick() {
-
+        var ino = document.getElementById("ino").value;
         var startDate = document.getElementById("startDate").value;
         var endDate = document.getElementById("endDate").value;
         var comment = document.getElementById("comment").value;
 
         var jsonObject = {
+            "ino": ino,
             "startdate": startDate,
             "enddate": endDate,
             "comment":comment
