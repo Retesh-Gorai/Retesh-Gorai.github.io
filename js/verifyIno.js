@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         const xhr = new XMLHttpRequest();
 
-        // xhr.onreadystatechange = function () {
+        xhr.onreadystatechange = function () {
         //     if (xhr.readyState == XMLHttpRequest.DONE) {
 
         //         var datatext = xhr.responseText;
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //             alert("Could not verify");
 
         //     }
-        // }
+        }
         xhr.open("POST", "http://localhost:8020/approve");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.setRequestHeader("Access-Control-Allow-Origin","*");
