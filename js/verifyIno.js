@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             }
         }
-        xhr.open("POST", "http://localhost:8020/approve");
+        xhr.open("POST", "http://localhost:8020/customApprove");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.setRequestHeader("Access-Control-Allow-Origin","*");
         xhr.send(jsonString);
