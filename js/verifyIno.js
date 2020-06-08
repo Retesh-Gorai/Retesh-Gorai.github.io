@@ -19,6 +19,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             if (xhr.readyState == XMLHttpRequest.DONE) {
 
                 var datatext = xhr.responseText;
+                console.log(datatext);
                 // var jsonResponse = JSON.parse(datatext);
                 // var status = jsonResponse.status;
                 if (datatext === "Manager"){
